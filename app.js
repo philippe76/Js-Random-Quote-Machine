@@ -5,8 +5,15 @@ const App = () => {
     const [author, setAuthor] = React.useState('Unknown Author')
 
     const fetchQuote = () => {
-        setQuote('Brand New Quote');
-        setAuthor('New Author')
+        fetch('https://goquotes-api.herokuapp.com/api/v1/random?count=1')
+            .then( response => {
+                return response.json()
+            })
+        .then(data => {
+            setQuote(data.quotes[0].text);
+            setAuthor(data.quotes[0].author)
+        })   
+        .catch(err => console.log(err))    
     }
 
 
