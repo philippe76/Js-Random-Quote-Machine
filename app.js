@@ -15,7 +15,7 @@ const App = () => {
         quoteBox: {
             width: '65%',
             border: '4px solid grey',
-            padding: '40px 40px',
+            padding: '40px 60px',
             borderRadius: '5px'
         },
         quote: {
@@ -25,21 +25,34 @@ const App = () => {
         },
         author: {
             textAlign: 'right',
-            fontSize: '1.2rem'
+            fontSize: '1.3rem'
         },
         buttonDiv: {
             display: 'flex',
             justifyContent: 'space-between',
+            alignItems: 'center',
             marginTop: '4rem'
         },
         tweet: {
-            fontSize: '1.3rem',
+            fontSize: '1.5rem',
             color: 'white',
-            backgroundColor: '#00008b',
-            padding: '0.1rem 0.7rem',
-            borderRadius: '4px'
-        }
-        
+            backgroundColor: '#6495ed',
+            padding: '0.2rem 1rem',
+            borderRadius: '4px',
+        },
+        newQuote: {
+            color: 'white',
+            backgroundColor: '#6495ed',
+            fontSize: '1rem',
+            fontWeight: '600',
+            wordSpacing: '0.2rem',
+            letterSpacing: '0.1rem',
+            padding: '1rem',
+            borderRadius: '4px',
+            border: 'none',
+            outline: 'none',
+            cursor: 'pointer'
+        }        
     }
     
 
@@ -63,7 +76,7 @@ const App = () => {
                 <p id="author" style={style.author}>- {author} -</p>
                 <div style={style.buttonDiv}>
                     <a href="https://twitter.com/intent/tweet"  style={style.tweet}id="tweet-quote" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
-                    <button id="new-quote" style={style.button} onClick={fetchQuote}>NEW QUOTE</button>
+                    <button id="new-quote" style={style.newQuote} onClick={fetchQuote}>NEW QUOTE</button>
                 </div>
                 
             </div>
