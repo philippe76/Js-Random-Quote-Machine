@@ -8,6 +8,7 @@ const App = () => {
     const style = {
         container: {
             display: 'flex',
+            flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
             height: '100vh',
@@ -56,6 +57,11 @@ const App = () => {
             border: 'none',
             outline: 'none',
             cursor: 'pointer'
+        },
+        footer: {
+            alignSelf: 'flex-end',
+            marginRight: '15rem',
+            color: 'white'
         }        
     }
     
@@ -91,8 +97,8 @@ const App = () => {
                     <a href="https://twitter.com/intent/tweet"  style={style.tweet}id="tweet-quote" target="_blank" rel="noopener noreferrer" title="Tweet this quote"><i class="fa fa-twitter"></i></a>
                     <button id="new-quote" style={style.newQuote} onClick={fetchQuote}>NEW QUOTE</button>
                 </div>
-                
             </div>
+            <p style={style.footer}>By Filip</p>
         </div>
     )
 }
